@@ -1,12 +1,12 @@
 
 const feedback = document.querySelector('#feedback');
-const submitBtn = document.querySelector('#submit-answer');
+const submitBtn = document.getElementById('submit-answer');
 checkAnswer =() => {
-const userAnswer = document.querySelector('input[name="quiz"]:checked');
+const answer = document.querySelector('input[name="quiz"]:checked');
 const correctAnswer = "4"
-const userAnserValue = userAnswer.value
+const userAnswer = answer.value
 
-  if (userAnserValue === correctAnswer) {
+  if (userAnswer === correctAnswer) {
     feedback.textContent = "Correct! Well done.";
   } else {
     feedback.textContent = "That's incorrect. Try again!";
